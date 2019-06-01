@@ -1,0 +1,20 @@
+<ul class="lista">
+  <li *ngFor="let list of lista; let i = index" [attr.data-index]="i">
+    <div class="itemLista1" [ngStyle]="controlCancion(list)">
+      <div class="seccion1 click" (click)="playSong(list)">
+        <div class="seccion1_1">
+          <img class="listImagen" src="assets/adminpro/images/mockImages/cancion.jpg" width="40px" height="100%" />
+          <div class="listNombre">
+            <h5 style="padding: 0px;margin: 0px; font-size: 14px;">{{list.nombre}}</h5>
+            <p style="padding: 0px;margin: 0px;font-size: 12px;">{{artist.nombre}}</p>
+          </div>
+          <p *ngIf="list.precio" class="listPrecio" style="font-size: 14px;">
+            {{list.precio}}
+          </p>
+        </div>
+      </div>
+      <div class="seccion2 mdi mdi-dots-vertical click" style="margin-top: 9px;">
+      </div>
+    </div>
+  </li>
+</ul>

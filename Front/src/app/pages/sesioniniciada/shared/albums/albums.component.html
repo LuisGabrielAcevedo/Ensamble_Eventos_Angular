@@ -1,0 +1,14 @@
+  <ul class="listaAlbum">
+    <li *ngFor="let list of listaAlbums" class="extraItemAlbum click">
+      <div [routerLink]="['/profile','album',artistId,list._id]">
+        <img class="imagenItem" src="{{'assets/adminpro/images/mockImages/'+list.imagenPortada}}" />
+        <div class="itemPalabras">
+          <p style="margin: 0px;">{{list.nombre}} ({{list.numeroCanciones}})</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+
+

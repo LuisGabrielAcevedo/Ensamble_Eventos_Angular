@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { Http, Headers, RequestOptions } from '@angular/http';
+// Url
+import { Global } from './url.service';
+
+
+// Mocks
+import { notifications } from '../mocks/mock.notifications';
+
+
+
+@Injectable()
+export class NotificationsService {
+
+  constructor() { }
+
+  getNotifications(id): Observable<any> {
+    return of(notifications);
+  }
+
+}

@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.listaUser {
+    margin: 5px auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+.itemUser {
+    float: left;
+    background: #67757c;
+    width: 170px;
+    height: 210px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 7px;
+}
+
+
+/* INICIO arreglos Para el caso de NONE, que no se muestra el boton seguir
+   itemUser1 Para mostrar en el perfil recuadro mas pequeño y sin boton */
+
+.listaUser1 {
+    margin: 5px auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+.itemUser1 {
+    float: left;
+    width: 50px;
+    height: 60px;
+    margin: 2px 2px 2px 2px;
+    border-radius: 7px;
+}
+
+.contenedor11 {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.itemPalabrasUser1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 37px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 0.8px;
+    font-size: 8px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.imagenItem1 {
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-radius: 7px;
+}
+
+
+/*  FIN arreglos Para el caso de NONE, que no se muestra el boton seguir */
+
+.contenedor1 {
+    width: 100%;
+    height: 160px;
+    position: relative;
+}
+
+.contenedor2 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagenItem {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+button {
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.itemPalabrasUser {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 359px) {
+    .listaUser {
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 617px) and (min-width:360px) {
+    .listaUser {
+        max-width: 360px;
+    }
+}
+
+@media only screen and (max-width: 756px) and (min-width: 618px) {
+    .listaUser {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 757px) {
+    .listaUser {
+        margin: 5px 10px;
+    }
+}
+
+
+/* .itemUser:hover{
+    transform: scale(0.9);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+
+ */

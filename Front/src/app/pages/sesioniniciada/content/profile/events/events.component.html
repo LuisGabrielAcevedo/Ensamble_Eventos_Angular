@@ -1,0 +1,39 @@
+<div class="card">
+  <div *ngIf="!artist && !eventos" class="card-body Loading">
+    <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+  </div>
+  <div *ngIf="eventos && artist">
+    <h4 style="text-align: center; margin: 10px;">Próximos eventos</h4>
+    <div *ngFor="let evento of eventos" class="evento">
+      <div class="evento_encabezado">
+        <h4 style="margin: 0px;padding: 0px">{{artist.nombre}}</h4>
+      </div>
+      <div class="evento_contenido">
+        <div class="evento_1">
+          <img *ngIf="artist.imagen" src="{{'assets/adminpro/images/mockImages/'+artist.imagen}}" class="img-responsive" />
+          <img *ngIf="!artist.imagen" src="assets/adminpro/images/users/Imagen.png" class="img-responsive">
+        </div>
+        <div class="evento_2">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding:0px;">
+                <h5 style="margin: 0px;padding: 0px">{{evento.titulo}}</h5>
+                <p style="margin: 0px;padding: 0px; color: white;">
+                  <i class=" ti-location-pin"></i>
+                  <span style="margin: 0px;padding: 0px;">{{evento.direccion}}</span>
+                </p>
+                <p style="margin: 0px;padding: 0px">
+                  <i class="ti-calendar"></i>
+                  {{evento.fechaEvento}} {{evento.hora}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding:0px;">
+            <p style="margin: 0px;padding: 0px">Tipo de evento: {{evento.tipoDeEvento}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<ul class="listaUser">
+
+    <!-- para followed-->
+    <div *ngIf="tipoLista === 'FOLLOWED'">
+        <li *ngFor="let list of listaSeguidos" class="itemUser1">
+            <div class="contenedor11 click" [routerLink]="['/profile','information',list._id]" (click)="click()">
+                <img class="imagenItem1" *ngIf="!list.imagen" src="assets/adminpro/images/users/Imagen.png">
+                <!-- <img class="imagenItem" *ngIf="list.imagen" src="{{url+'getImagen/'+list.imagen}}"/> -->
+                <img class="imagenItem1" *ngIf="list.imagen" src="{{'assets/adminpro/images/mockImages/'+list.imagen}}" title={{list.nombre}}>
+                <div class="itemPalabrasUser1">
+                    <p style="margin: 0px;" [routerLink]="['/profile','information',list._id]" (click)="click()">{{list.nombre}}</p>
+                </div>
+            </div>
+        </li>
+    </div>
+
+    <!-- para followin-->
+
+    <div *ngIf="tipoLista != 'FOLLOWED'">
+        <li *ngFor="let list of listaSeguidores" class="itemUser1">
+            <div class="contenedor11 click" [routerLink]="['/profile','information',list._id]" (click)="click()">
+                <img class="imagenItem1" *ngIf="!list.imagen" src="assets/adminpro/images/users/Imagen.png">
+                <!-- <img class="imagenItem" *ngIf="list.imagen" src="{{url+'getImagen/'+list.imagen}}"/> -->
+                <img class="imagenItem1" *ngIf="list.imagen" src="{{'assets/adminpro/images/mockImages/'+list.imagen}}" title={{list.nombre}}>
+                <div class="itemPalabrasUser1">
+                    <p style="margin: 0px;" [routerLink]="['/profile','information',list._id]" (click)="click()">{{list.nombre}}</p>
+                </div>
+
+            </div>
+        </li>
+    </div>
+
+
+</ul>

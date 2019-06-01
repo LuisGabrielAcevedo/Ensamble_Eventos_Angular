@@ -1,0 +1,8 @@
+<div class="card">
+  <div *ngIf="!albums && !videos" class="card-body Loading">
+    <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+  </div>
+  <div *ngIf="albums && videos" class="card-body">
+    <h4>Videos</h4>
+  </div>
+</div>

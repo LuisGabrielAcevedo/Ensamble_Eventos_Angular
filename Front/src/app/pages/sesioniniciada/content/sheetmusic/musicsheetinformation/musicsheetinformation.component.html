@@ -1,0 +1,35 @@
+<!--<ul>
+
+    <li *ngFor="let list of listSheetforArtist">
+        <div *ngIf=" this.listSheetforArtist._id == this.artistId">
+            <iframe src="{{'assets/adminpro/mockPdf/'+list.documento}}" width="100%" height="280%">
+                     </iframe>
+        </div>
+    </li>
+</ul>-->
+
+
+<!--<ul>
+
+    <li >
+        <div>
+            <iframe src="{{'assets/adminpro/mockPdf/yellow.pdf'}}" width="100%" height="280%">
+                     </iframe>
+        </div>
+    </li>
+</ul>-->
+<!--
+<h3>{{this.rutaPdf}}</h3>
+<h3>{{rutaPdf}}</h3>
+<h3>"{{'assets/adminpro/mockPdf/'+rutaPdf}}"</h3> -->
+
+<!--
+<iframe src="{{'assets/adminpro/mockPdf/'+rutaPdf}}" width="100%" height="260%">
+</iframe>-->
+
+
+<!--<iframe src="{{rutaPdf}}" width="100%" height="260%">
+</iframe>-->
+
+<iframe [src]="urlSafe" width="100%" height="230%">
+</iframe>

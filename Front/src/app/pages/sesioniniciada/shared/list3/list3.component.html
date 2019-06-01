@@ -1,0 +1,39 @@
+<!--
+<div>
+    <div>
+        <h2>{{titulo}}</h2>
+    </div>
+    <div>
+        <ul class="Lista1">
+            <li class="ItemLista1" *ngFor="let arti of listaArtistas">
+                <div class="posi1Lista1">
+                    <div *ngIf="arti.artist_image == 'null'">
+                        <img src="assets/img/Imagen.png" width="100px" height="100px">
+                    </div>
+                </div>
+                <div class="posi2Lista1">
+                    <p><a [routerLink]="['/Partitura','Info',arti._id]">{{arti.artist_name}}</a></p>
+                    <p><a [routerLink]="['/Partitura','Info',arti._id]">( {{arti.number_music_sheet}} )</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-success" (click)="OpenModal()">Add</button>
+    </div>
+</div>
+-->
+
+
+<ul>
+    <li *ngFor="let list of listaArtistas" class="itemUser">
+        <div class="contenedor1 click" [routerLink]="['/sheetmusic','searchmusicsheet',list.nombre]" (click)="click()">
+            <img class="imagenItem" *ngIf="!list.imagen" src="assets/adminpro/images/users/Imagen.png">
+            <!-- <img class="imagenItem" *ngIf="list.imagen" src="{{url+'getImagen/'+list.imagen}}"/> -->
+            <img class="imagenItem" *ngIf="list.imagen" src="{{'assets/adminpro/images/mockImages/'+list.imagen}}" title={{list.nombre}}>
+            <div class="itemPalabrasUser">
+                <p style="margin: 0px;" [routerLink]="['/sheetmusic','searchmusicsheet',list.nombre]" (click)="click()">{{list.nombre}} ( {{list.numeroPartituras}} )</p>
+            </div>
+        </div>
+    </li>
+</ul>

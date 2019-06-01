@@ -1,0 +1,81 @@
+<!-- ============================================================== -->
+<!-- Customer Profile copy and paste this code-->
+<!-- ============================================================== -->
+<!-- Card -->
+<div class="card">
+    <div *ngIf="!artist && !information" class="card-body Loading">
+        <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+    </div>
+    <div *ngIf="artist && information">
+        <div class="card-body">
+            <div class="row art">
+                <div class="artist">
+                    <div class="sesion1">
+                        <img  [src]=" artist.imagen | imagen" class="img-circle" width="100" />
+                    </div>
+                    <div class="sesion2">
+                        <h4 *ngIf="artist.nombreUsuario" class="font-medium">{{artist.nombreUsuario}}</h4>
+                        <h6>{{information.descripcion}}</h6>
+                        <button *ngIf="!loSigo && !meSigue" (click)="follow()" class="btn btn-success">
+                  Seguir</button>
+                        <button *ngIf="loSigo" (click)="deleteFollow()" class="btn btn-success">
+                  Dejar de seguir</button>
+                        <button *ngIf="!loSigo && meSigue" (click)="follow()" class="btn btn-success">
+                  Seguir también</button>
+                        <button *ngIf="loSigo" class="btn btn-success">
+                  <i class="mdi mdi-message-text"></i>
+                </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-t-40">
+                <div class="col b-r text-center">
+                    <h2 class="font-light">{{information.seguidores}}</h2>
+                    <h6>Seguidores</h6>
+                </div>
+                <div class="col b-r text-center">
+                    <h2 class="font-light">{{information.seguidos}}</h2>
+                    <h6>Seguidos</h6>
+                </div>
+                <div class="col text-center">
+                    <h2 class="font-light">145</h2>
+                    <h6>Canciones</h6>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="card-body">
+            <p class="text-center aboutscroll">
+                {{information.detalles}}
+            </p>
+            <ul class="list-icons d-flex flex-item text-center p-t-10">
+                <li class="col">
+                    <a href="https://www.facebook.com/{{information.web}}" data-toggle="tooltip" title="Facebook">
+                        <i class="ti-world font-20"></i>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="https://www.facebook.com/{{information.facebook}}" data-toggle="tooltip" title="Facebook">
+                        <i class="ti-facebook font-20"></i>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="https://www.instagram.com/{{information.instagram}}" data-toggle="tooltip" title="Instagram">
+                        <i class="ti-instagram font-20"></i>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="https://www.youtube.com/{{information.youtube}}" data-toggle="tooltip" title="Youtube">
+                        <i class="ti-youtube font-20"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Browser state copy and paste this code-->
+<!-- ============================================================== -->

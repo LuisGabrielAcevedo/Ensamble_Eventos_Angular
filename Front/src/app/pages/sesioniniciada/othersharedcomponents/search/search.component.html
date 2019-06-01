@@ -1,0 +1,24 @@
+<div style="margin: 10px;">
+  <input #input (keyup.enter)="buscar(input.value)" class="form-control" type="text" placeholder="Ensamble, youtube, spotify, facebook, instagram...">
+</div>
+<div *ngIf="data.length === 0" class="card-body Loading" style="margin-top: 10px;">
+  <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+</div>
+<div style="text-align: center">
+  <h2 style="margin-left:10px;">Resultados ...</h2>
+  <ul class="listaBuscador" *ngIf="data.length !== 0">
+    <li *ngFor="let item of data" class="card click itemBuscador">
+      <div (click)="openUrl(item)">
+        <img *ngIf="item.tipoDataFront === 'myApi'" src="{{'assets/adminpro/images/mockImages/'+item.imagen}}" class="imagenItem">
+        <img *ngIf="item.tipoDataFront !== 'myApi'" src="{{item.imagen}}" class="imagenItem">
+        <div class="itemPalabras">
+          <h6>{{item.titulo}}</h6>
+          <div style="overflow: hidden;" class="tipoBuscadorInfo">
+            <img src="{{itemFromImage(item)}}" style="float:left; width: 30px; padding: 2px;">
+            <p style="float:left; padding: 5px">{{itemFrontName(item)}}</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

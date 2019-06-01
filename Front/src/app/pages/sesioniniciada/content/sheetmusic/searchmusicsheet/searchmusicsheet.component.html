@@ -1,0 +1,121 @@
+<!--<div *ngFor="let parti of listSheetforArtist">
+    {{parti.artista}}
+
+</div>
+{{this.artistName._nombre}}-->
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="row">
+                <div class="col-xlg-2 col-lg-3 col-md-4">
+                    <div class="card-body inbox-panel">
+
+                        <li class="list-group-item" data-role="task">
+                            <div class="checkbox checkbox-info">
+                                <input type="checkbox" id="inputForward" name="inputCheckboxesForward">
+                                <label for="inputForward" class=""> <span>Coincidencia Extacta</span></label>
+                            </div>
+
+                        </li>
+
+
+                        <a href="app-compose.html" class="btn btn-danger m-b-20 p-10 btn-block waves-effect waves-light">Compose</a>
+                        <ul class="list-group list-group-full">
+                            <li class="list-group-item active">
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-gmail"></i> Inbox </a>
+                                <span class="badge badge-success ml-auto">6</span>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-star"></i> Starred </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-send"></i> Draft </a>
+                                <span class="badge badge-danger ml-auto">3</span>
+                            </li>
+                            <li class="list-group-item ">
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-file-document-box"></i> Sent Mail </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-delete"></i> Trash </a>
+                            </li>
+                        </ul>
+                        <h3 class="card-title m-t-40">Labels</h3>
+                        <div class="list-group b-0 mail-list">
+                            <a href="#" class="list-group-item">
+                                <span class="fa fa-circle text-info m-r-10"></span>Work</a>
+                            <a href="#" class="list-group-item">
+                                <span class="fa fa-circle text-warning m-r-10"></span>Family</a>
+                            <a href="#" class="list-group-item">
+                                <span class="fa fa-circle text-purple m-r-10"></span>Private</a>
+                            <a href="#" class="list-group-item">
+                                <span class="fa fa-circle text-danger m-r-10"></span>Friends</a>
+                            <a href="#" class="list-group-item">
+                                <span class="fa fa-circle text-success m-r-10"></span>Corporate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xlg-10 col-lg-9 col-md-8 bg-light-part b-l">
+                    <div class="card-body">
+                        <div style="margin: 10px;">
+                            <!--<input #input id="inputPartitura" ng-model="searchText" (keyup.enter)="buscar(input.value)" class="form-control" type="text" placeholder="Escriba un nombre">-->
+                            <!--<input  type="text" class="form-control" placeholder="Escriba un nombre">-->
+                            <input id="inputPartitura" [(ngModel)]="buscarTexto" type="text" class="form-control" placeholder="Escriba un nombre">
+                            <!-- <input #input id="inputPartitura" type="text" class="form-control" placeholder="Escriba un nombre">-->
+
+                        </div>
+                        <h4 class="card-title">Partituras</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Genero</th>
+                                        <th scope="col">Instrumento</th>
+                                        <th scope="col">Archivo</th>
+                                        <th scope="col">Precio $ US</th>
+                                        <th scope="col">Precio $ AR</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    <!--  <tr *ngFor="let parti of listSheetforArtist | partituraFilter: buscarTexto; let i = index ">-->
+
+                                    <tr *ngFor="let parti of listSheetforArtist | partituraFilter: buscarTexto; let i = index ">
+                                        <!--<ng-container *ngIf=" list.artista == this.artistName._nombre">-->
+                                        <td>{{i+1}}</td>
+                                        <!--<th scope="row">{{i+1}} </th>-->
+                                        <td>{{ parti.titulo}}</td>
+                                        <td>{{ parti.genero}}</td>
+                                        <td>{{ parti.instrumento}}</td>
+                                        <td>
+                                            <a id="nombrePdf" [routerLink]="['/sheetmusic','musicsheetinformation',parti.documento]" (click)="enviarnombre(parti.documento)" class="btn-default btn"> {{ parti.documento}}</a>
+
+                                        </td>
+                                        <td>{{ parti.precioDolar}}</td>
+                                        <td><strong>{{ parti.precioPeso}}</strong></td>
+                                        <!--</ng-container>-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<p id="nombrePdf" [routerLink]="['/sheetmusic','musicsheetinformation',parti.documento]" (click)="click()">{{ parti.documento}}</p>-->
+<!--ng-click='enviarnombre( parti.documento)'-->
+<!-- <button id="nombrePdf" [routerLink]="['/sheetmusic','musicsheetinformation',parti.documento]" (click)="enviarnombre(parti.documento)" class="btn-default btn"> {{ parti.documento}}</button>-->

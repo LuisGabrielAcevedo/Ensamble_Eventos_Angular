@@ -1,0 +1,15 @@
+<div class="fondoNegro">
+    <div [ngStyle]="color()" class=" row animated bounceInRight" [ngClass]="mensajeService.tipoEstilo">
+        <div style="width: 100%;">
+            <div style="text-align: right">
+                <p (click)="mensajeService.cerrar()" class="click">x</p>
+            </div>
+            <img style="width: 200px;height: 200px;" *ngIf="mensajeService.tipoMensaje === 'OK'" src="assets/adminpro/images/ok1.png">
+            <img style="width: 200px;height: 200px;" *ngIf="mensajeService.tipoMensaje === 'WARNING'" src="assets/adminpro/images/warning1.png">
+            <img style="width: 200px;height: 200px;" *ngIf="mensajeService.tipoMensaje === 'ERROR'" src="assets/adminpro/images/error1.png">
+            <div>
+                <p>{{mensajeService.textoMensaje}}</p>
+            </div>
+        </div>
+    </div>
+</div>

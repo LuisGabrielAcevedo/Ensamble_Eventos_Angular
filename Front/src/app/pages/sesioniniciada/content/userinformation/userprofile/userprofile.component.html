@@ -1,0 +1,243 @@
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <!-- Row -->
+    <div class="row">
+        <!-- Column -->
+        <div class="col-lg-4 col-xlg-3 col-md-5">
+            <div class="card">
+                <!-- <div class="card-body"> -->
+                <div align="center" class="m-t-10" style="margin: 0px;">
+                    <!--   <center class="m-t-30"> <img src="../../../../../../assets/adminpro/images/users/5.jpg" class="img-circle" width="150" />-->
+                    <!--   <img [src]=" user.imagen | imagen" class="img-circle" width="150" />
+                            <h4 class="card-title m-t-10">{{user.nombre}} {{user.apellido}}</h4>
+                            <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">{{datos1.visitasPerfil}}</font></a></div>
+                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
+                            </div> -->
+                    <!-- </center> -->
+
+                    <div class="card">
+                        <img class="card-img" [src]=" user.imagenPortada | imagen" alt="Card image">
+                        <div class="card-img-overlay card-inverse social-profile d-flex ">
+                            <div class="align-self-center">
+                                <img [src]=" user.imagen | imagen" class="img-circle" width="150">
+                                <h4 class="card-title">{{user.nombre}} {{user.apellido}}</h4>
+                                <h6 class="card-subtitle">{{user.rol}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="map-box">
+                        <!-- Seguidores -->
+                        <div *ngIf="user.rol != 'Usuario'">
+                            <div class="container" align="center" class="m-t-30">
+                                <small align="left" class="text-muted p-t-30 db">Seguidores</small>
+                                <app-list2 [tipoLista]=tipo> </app-list2>
+                            </div>
+                        </div>
+
+                        <!-- Seguidos -->
+                        <div *ngIf="user.rol != 'Usuario'">
+                            <div class="container" align="center" class="m-t-30">
+                                <small align="left" class="text-muted p-t-30 db">Seguidos</small>
+                                <app-list2 [tipoLista]=tipo1> </app-list2>
+                            </div>
+                        </div>
+
+                        <!--Redes Sociales-->
+                    </div>
+                    <small class="text-muted p-t-30 db">Redes Sociales</small>
+                    <!--   <button class="btn btn-circle btn-secondary"><i class="fa fa-globe"></i><a href="" ngClick=”method” target="_blank"></a></button> -->
+                    <button onclick="window.open('http://es.stackoverflow.com', '_blank')" target=”_blank” class="btn btn-circle btn-secondary">
+                            <i class="fa fa-facebook"></i>
+                        </button>
+                    <button onclick="window.open('http://es.stackoverflow.com', '_blank')" target=”_blank” class="btn btn-circle btn-secondary">
+                            <i class="fa fa-instagram"></i>
+                        </button>
+                    <button onclick="window.open('http://es.stackoverflow.com', '_blank')" target=”_blank” class="btn btn-circle btn-secondary">
+                            <i class="fa fa-youtube"></i>
+                        </button>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <!-- Column -->
+        <div class="col-lg-8 col-xlg-9 col-md-7">
+            <div class="card">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs profile-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Ajustes</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home" role="tabpanel">
+                        <h2>Mis publicaciones</h2>
+                    </div>
+                    <!--second tab-->
+                    <div class="tab-pane" id="profile" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane" id="settings" role="tabpanel">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+    </div>
+    <!-- Row -->
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Right sidebar -->
+    <!-- ============================================================== -->
+    <!-- .right-sidebar -->
+    <div class="right-sidebar">
+        <div class="slimscrollright">
+            <div class="rpanel-title"> Service Panel
+                <span>
+                        <i class="ti-close right-side-toggle"></i>
+                    </span>
+            </div>
+            <div class="r-panel-body">
+                <ul id="themecolors" class="m-t-20">
+                    <li>
+                        <b>With Light sidebar</b>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="default" class="default-theme">1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="green" class="green-theme">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="red" class="red-theme">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a>
+                    </li>
+                    <li class="d-block m-t-30">
+                        <b>With Dark sidebar</b>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme working">7</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a>
+                    </li>
+                </ul>
+                <ul class="m-t-20 chatonline">
+                    <li>
+                        <b>Chat option</b>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/1.jpg" alt="user-img" class="img-circle">
+                            <span>Varun Dhavan
+                                    <small class="text-success">online</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/2.jpg" alt="user-img" class="img-circle">
+                            <span>Genelia Deshmukh
+                                    <small class="text-warning">Away</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/3.jpg" alt="user-img" class="img-circle">
+                            <span>Ritesh Deshmukh
+                                    <small class="text-danger">Busy</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/4.jpg" alt="user-img" class="img-circle">
+                            <span>Arijit Sinh
+                                    <small class="text-muted">Offline</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/5.jpg" alt="user-img" class="img-circle">
+                            <span>Govinda Star
+                                    <small class="text-success">online</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/6.jpg" alt="user-img" class="img-circle">
+                            <span>John Abraham
+                                    <small class="text-success">online</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/7.jpg" alt="user-img" class="img-circle">
+                            <span>Hritik Roshan
+                                    <small class="text-success">online</small>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="../../../../../../assets/adminpro/images/users/8.jpg" alt="user-img" class="img-circle">
+                            <span>Pwandeep rajan
+                                    <small class="text-success">online</small>
+                                </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->

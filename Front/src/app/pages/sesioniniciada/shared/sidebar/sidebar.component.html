@@ -1,0 +1,72 @@
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="user-profile" *ngIf="user">
+                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false">
+                        <!--   <img src="{{'assets/adminpro/images/mockImages/'+user.imagen}}" /> -->
+                        <div class="u-img"><img [src]=" user.imagen | imagen" alt="user"></div>
+                        <span class="hide-menu">{{user.nombreUsuario}}</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/userinformation','userprofile']">Mi perfil</a></li>
+                        <li><a [routerLink]="['/userinformation','edituser']">Editar datos</a></li>
+                        <li><a [routerLink]="['/userinformation','followers']">Seguidores</a></li>
+                        <li><a [routerLink]="['/userinformation','followed']">Seguidos</a></li>
+                        <li><a [routerLink]="['/userinformation','mynotifications']">Notificaciones</a></li>
+                        <li><a [routerLink]="['/userinformation','myplaylists']">My playlists</a></li>
+                        <li><a class="click" (click)="logout()">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+                <li class="nav-devider" *ngIf="user"></li>
+                <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">
+                    Usuarios
+                    <!-- <span class="label label-rouded label-themecolor pull-right">4</span> -->
+                </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/other','usertable']">Lista de usuarios registrados</a></li>
+                    </ul>
+                </li>
+                <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-guitar-pick"></i><span class="hide-menu">Artistas</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/other','searchlist']">Lista de artistas</a></li>
+                    </ul>
+                </li>
+                <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-music-note-eighth"></i><span class="hide-menu">Partituras</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/sheetmusic','allartists']">Artistas</a></li>
+                        <li><a [routerLink]="['/sheetmusic','searchmusicsheet']">Buscardor de partituras</a></li>
+                    </ul>
+                </li>
+
+                <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-message"></i><span class="hide-menu">
+                        Messenger
+                        <!-- <span class="label label-rouded label-danger pull-right">25</span> -->
+                    </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/messenger']">Contactos</a></li>
+                    </ul>
+                </li>
+                <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-settings"></i><span class="hide-menu">
+                    Configuración
+                    <!-- <span class="label label-rouded label-danger pull-right">25</span> -->
+                </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/ensambledatabase']">Base de datos</a></li>
+                        <li><a [routerLink]="['/statisticsapp']">Estadísticas de la pagina</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->

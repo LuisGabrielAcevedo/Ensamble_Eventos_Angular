@@ -1,0 +1,28 @@
+<div class="card">
+  <div *ngIf="!canciones" class="card-body Loading">
+    <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+  </div>
+  <div *ngIf="canciones" class="card-body" style="padding: 0px">
+    <h4 style="text-align: center; margin: 10px;">Canciones</h4>
+    <ul class="lista">
+        <li *ngFor="let cancion of canciones; let i = index" [attr.data-index]="i">
+          <div class="itemLista1" [ngStyle]="controlCancion(cancion)">
+            <div class="seccion1 click" (click)="playSong(cancion, i)">
+              <div class="seccion1_1">
+                <img class="listImagen" src="assets/adminpro/images/mockImages/{{cancion.artista.imagen}}" width="40px" height="100%" />
+                <div class="listNombre">
+                  <h5 style="padding: 0px;margin: 0px; font-size: 14px;">{{cancion.nombre}}</h5>
+                  <p style="padding: 0px;margin: 0px;font-size: 12px;">{{cancion.artista.nombre}}</p>
+                </div>
+                <p *ngIf="cancion.precio" class="listPrecio" style="font-size: 14px;">
+                  {{cancion.precio}}
+                </p>
+              </div>
+            </div>
+            <div class="seccion2 mdi mdi-dots-vertical click" style="margin-top: 9px;">
+            </div>
+          </div>
+        </li>
+      </ul>
+  </div>
+</div>

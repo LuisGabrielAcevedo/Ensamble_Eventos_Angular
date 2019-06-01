@@ -1,0 +1,25 @@
+<ul class="listaUser">
+    <!--Lista generica para seguidores o seguidos contiene el boton seguir y recuadro mas grande -->
+    <div>
+        <li *ngFor="let list of lista" class="itemUser">
+            <div class="contenedor1 click" [routerLink]="['/profile','information',list._id]" (click)="click()">
+                <img class="imagenItem"  [src]=" list.imagen | imagen" />
+                <div class="itemPalabrasUser1">
+                    <p style="margin: 0px;" [routerLink]="['/profile','information',list._id]" (click)="click()">{{list.nombreUsuario}}</p>
+                </div>
+            </div>
+
+            <div class="contenedor2">
+                <!-- <div *ngIf="_loadingService.isLoading" class="Loading">
+                    <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+                </div> -->
+                <button *ngIf="tipoLista === 'FOLLOWING' && !following.includes(list._id)" (click)="follow(list._id)" class="btn btn-success">
+        Seguir</button>
+                <button *ngIf="tipoLista === 'FOLLOWED' && !following.includes(list._id)" (click)="follow(list._id)" class="btn btn-success">
+        Seguir también</button>
+                <button style="background: white; color: #06d79c;  border: 1px solid #06d79c" *ngIf="following.includes(list._id)" (click)="deleteFollow(list._id)" class="btn btn-success">
+        Dejar de seguir</button>
+            </div>
+        </li>
+    </div>
+</ul>

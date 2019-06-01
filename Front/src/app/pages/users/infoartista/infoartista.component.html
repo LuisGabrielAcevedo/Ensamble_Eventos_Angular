@@ -1,0 +1,85 @@
+<section id="wrapper">
+    <div class="login-register" style="background-image:url(../../../../assets/adminpro/images/background/login-register.jpg);">
+
+        <div class="infoartista-box card">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <form [formGroup]="forma" class="form-horizontal form-material">
+                                <!--Contenedor con scroll hecho en scc-->
+                                <perfect-scrollbar>
+                                    <div class="boxContenedor">
+
+                                        <h3 class="box-title m-b-20">Completa tu Perfil</h3>
+                                        <div *ngIf="mostrarDatos">
+                                            <div class="form-group">
+                                                <div class="col-xs-12">
+                                                    <input placeholder="Nombre" class="form-control" [formControlName]="'nombre'" name="nombre">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-xs-12">
+                                                    <input placeholder="Apellido" class="form-control" [formControlName]="'apellido'" name="apellido">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input placeholder="Facebook" class="form-control" [formControlName]="'facebook'" name="facebook">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input placeholder="Instagram" class="form-control" [formControlName]="'instagram'" name="instagram">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input placeholder="Youtube" class="form-control" [formControlName]="'youtube'" name="youtube">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input placeholder="Web" class="form-control" [formControlName]="'web'" name="web">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+
+                                                <textarea placeholder="Descripcion" class="form-control" [formControlName]="'descripcion'" name="descripcion"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <textarea placeholder="Detalles" class="form-control" [formControlName]="'detalles'" name="detalles"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </perfect-scrollbar>
+                                <!--  m= margin  b= margin butto  p=padding t=top-->
+                                <div class="form-group text-center p-t-10">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-success" (click)="guardar()" type="submit">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

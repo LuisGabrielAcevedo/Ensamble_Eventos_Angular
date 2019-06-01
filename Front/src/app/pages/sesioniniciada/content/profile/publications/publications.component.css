@@ -1,0 +1,44 @@
+/* .ownStyle{
+    text-align: center;
+    margin-bottom: 10px;
+} */
+.lista{
+    list-style: none;
+    padding: 0px;
+}
+.publicacion{
+    margin:10px;
+    border: 1px solid #398bf7;
+    -webkit-box-shadow: 2px 2px 5px #398bf7;
+     -moz-box-shadow: 2px 2px 5px #398bf7;
+}
+.encabezadoPublicacion{
+    overflow: hidden;
+    padding: 10px;
+    background:#398bf7;
+}
+.imagenPerfilPublicacion{
+    float: left;
+    width: 20%;
+}
+.datosEncabezadoPublicacion{
+    float: left;
+    width: 80%;
+    height: 40px;
+    padding-top: 13px; 
+    text-align: left;
+}
+
+.informacionPublicaciones{
+    border-top: 1px solid #67757c;
+    overflow: hidden;
+    padding: 5px;
+    font-size: 14px;    
+}
+.botonesPublicaciones{
+    border-top: 1px solid #67757c;
+    border-bottom: 1px solid #67757c;
+    overflow: hidden;
+    padding: 5px;
+    font-size: 14px;
+}

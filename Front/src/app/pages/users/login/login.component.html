@@ -1,0 +1,66 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<section id="wrapper">
+    <div class="login-register" style="background-image:url(../../../../assets/adminpro/images/background/login-register.jpg);">
+        <div class="login-box card">
+            <!-- <div class="container"> -->
+            <div class="card">
+                <div class="card-body">
+                    <form ngNativeValidate [formGroup]="forma" (ngSubmit)="loginUsuario()" class="form-horizontal form-material" id="loginform" action="index.html">
+                        <h3 class="box-title m-b-20">Iniciar Sesion</h3>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <input [formControlName]="'email'" name="email" class="form-control" type="email" required placeholder="Email"> </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input [formControlName]="'clave'" name="clave" class="form-control" type="password" required placeholder="Clave"> </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="checkbox checkbox-info pull-left p-t-0">
+                                    <input [formControlName]="'recuerdame'" name="recuerdame" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                                    <label for="checkbox-signup"> Recuerdame </label>
+                                </div>
+                                <a [routerLink]="['/users','forgotpassword']" id="to-recover" class="text-dark pull-right">
+                                    <i class="fa fa-lock m-r-5"></i> Olvido su clave?</a>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="col-xs-12 p-b-20">
+                                <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Iniciar sesion</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                                <div class="social">
+                                    <a href="" class="btn  btn-facebook" data-toggle="tooltip" title="Iniciar sesión con Facebook">
+                                        <i aria-hidden="true" class="fa fa-facebook"></i>
+                                    </a>
+                                    <button type="button" id="btnGoogle" class="btn btn-googleplus" data-toggle="tooltip" title="Iniciar sesión con Google">
+                                        <i aria-hidden="true" class="fa fa-google-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  m= margin  b= margin butto  p=padding-->
+                        <div class="form-group m-b-0">
+                            <div class="col-sm-12 text-center">
+                                No tienes una cuenta?
+                                <a [routerLink]="['/users','preregister']" class="text-info m-l-5">
+                                    <b>Registrate</b>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

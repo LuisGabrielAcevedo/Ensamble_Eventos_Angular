@@ -1,0 +1,42 @@
+.pad10{
+    padding: 20px 10px;
+}
+.click{
+    cursor: pointer;
+}
+.Loading{
+    text-align: center;
+}
+.cerrar{
+    display: none;
+}
+.abrir{
+    display: block;
+}
+/* Lista */
+.lista{
+    list-style: none;
+    padding: 0px;
+    text-align: left;
+}
+.extraItem{
+    border: 1px solid #383f48;
+}
+.fondoNegro{
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+.hide-left-sidebar{
+    left: -240px;
+}
+.show-left-sidebar{
+    left: 0px;
+}
+body{
+    background: #67757c;;
+}

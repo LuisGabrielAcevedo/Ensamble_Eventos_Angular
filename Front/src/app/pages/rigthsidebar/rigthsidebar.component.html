@@ -1,0 +1,21 @@
+<div>
+    <button id="cambiarColor" (click)="open()" class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10">
+        <i class="ti-headphone text-white"></i>
+    </button>
+</div>
+<div class="right-sidebar animated slideInRight" [ngClass]="sideBarService.stateRigth"> 
+    <div class="slimscrollright">
+        <div style="background:rgb(44, 72, 99);" class="rpanel-title">Ensamble Player
+            <span>
+                <i class="ti-close right-side-toggle" (click)="close()"></i>
+            </span>
+        </div>
+        <div class="r-panel-body" style="padding: 0px;margin-left: 0px; border-left:rgb(44, 72, 99);">
+            <perfect-scrollbar>
+                <app-playermore></app-playermore>
+                <h4 style="margin: 4px;text-align: center;">PlayLists</h4>
+                <app-accordion [playList]="myPlayList"></app-accordion>
+            </perfect-scrollbar>
+        </div>
+    </div>
+</div>

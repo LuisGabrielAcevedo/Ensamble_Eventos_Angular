@@ -1,0 +1,53 @@
+<div *ngIf="cargando" class="Loading">
+  <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+</div>
+
+<div *ngIf="!cargando">
+  <div *ngIf="!cancion">
+    <p>Seleccione una canción</p>
+  </div>
+  <div *ngIf="cancion">
+    <div class="card" style="margin: 0px;">
+      <div class="el-card-item">
+        <div class="el-card-avatar el-overlay-1">
+          <img *ngIf="!cancion.artista.imagenArtista" src="assets/adminpro/images/users/Imagen.png" class="card-img-top">
+          <!-- <img *ngIf="cancion.artista.imagen" src="{{url+'getImagen/'+cancion.artista.imagen}}"/> -->
+          <img *ngIf="cancion.artista.imagenArtista" src="{{'assets/adminpro/images/mockImages/'+cancion.artista.imagenArtista}}" class="card-img-top"
+          />
+          <div class="contenedor">
+            <p *ngIf="playListActual" class="boton click" (click)="anterior()" style="float: left;">
+              <i class="ti-control-skip-backward"></i>
+            </p>
+            <p *ngIf="play == false" class="boton click" (click)="playSong()" style="float: left;">
+              <i class="ti-control-play"></i>
+            </p>
+            <p *ngIf=" play == true" class="boton click" (click)="pauseSong()" style="float: left;">
+              <i class="ti-control-pause"></i>
+            </p>
+            <p *ngIf="playListActual" class="boton click" (click)="siguiente()" style="float: left;">
+              <i class="ti-control-skip-forward"></i>
+            </p>
+            <!-- <img *ngIf="play == true" src="assets/adminpro/images/player/sonando.gif" style="
+              float: right;
+              margin: 5px;
+              position: absolute;
+              bottom: 4px;
+              left: 200px;" width="30" height="20">-->
+          </div>
+          <div id="barraContenedor" class="click" (click)="Adelantar($event)">
+            <div id="barraProgreso" class="click" ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card contenido" style="padding: 5px;margin: 0px;">
+      <h5 style="margin: 0px;padding: 0px;">{{cancion.nombreCancion}}</h5>
+      <p style="margin: 0px;padding: 0px;">
+        <small>{{cancion.artista.nombreArtista}}</small>
+      </p>
+    </div>
+  </div>
+</div>
+<audio id="player">
+  <source id="audio" src="" type="audio/mpeg"> Tu navegador no es compatible
+</audio>

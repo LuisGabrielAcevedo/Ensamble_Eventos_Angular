@@ -1,0 +1,19 @@
+.art {
+    padding: 20px;
+}
+
+.artist {
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.sesion1 {
+    float: left;
+    margin-right: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.sesion2 {
+    float: left;
+}

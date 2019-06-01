@@ -1,0 +1,91 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.listaUser {
+    margin: 5px auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+.itemUser {
+    float: left;
+    background: #67757c;
+    width: 170px;
+    height: 160px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 7px;
+}
+
+.contenedor1 {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    border-radius: 7px;
+}
+
+.contenedor2 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagenItem {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-radius: 7px;
+}
+
+button {
+    padding: 3px 5px;
+}
+
+.itemPalabrasUser {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 376px) {
+    .listaUser {
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 617px) and (min-width:377px) {
+    .listaUser {
+        max-width: 360px;
+    }
+}
+
+@media only screen and (max-width: 756px) and (min-width: 618px) {
+    .listaUser {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 757px) {
+    .listaUser {
+        margin: 5px 10px;
+    }
+}
+
+
+/* .itemUser:hover{
+    transform: scale(0.9);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+ */

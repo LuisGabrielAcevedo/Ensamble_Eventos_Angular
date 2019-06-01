@@ -1,0 +1,46 @@
+* {
+    padding: 2px;
+    margin: 0px;
+}
+
+.espacio {
+    padding: 5px;
+}
+
+.itemnombre {
+    width: 100%;
+    bottom: 10px;
+    padding: 0 0px 0 80px;
+}
+
+.itemphoto {
+    float: left;
+}
+
+.closeb {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.closeb:hover,
+.closeb:focus {
+    color: #000;
+    text-decoration: none;
+    opacity: .75;
+}
+
+.closeb:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+button.closeb {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}

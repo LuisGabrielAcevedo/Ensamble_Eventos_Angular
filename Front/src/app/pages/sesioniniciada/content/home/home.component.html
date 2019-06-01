@@ -1,0 +1,204 @@
+<!-- <app-menu></app-menu>
+<div class="row">
+    <div class="col-md-6 col-lg-4 col-xlg-2">
+        <app-card1 [datosExternos]=tarjeta1 [styleType]=styleType></app-card1>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xlg-2">
+        <app-card3 [datosExternos]=tarjeta2 [styleType]=styleType></app-card3>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xlg-2">
+        <app-card3 [datosExternos]=tarjeta3 [styleType]=styleType></app-card3>
+    </div>
+</div> -->
+
+<!-- 
+Para usar el componente app-card123 en datosExternos siempre debemos pasar un objeto con los siguientes parámetros 
+tarjeta2={
+      titulo: '¿Quieres mejorar tu oido musical?',
+      subtitulo: '¡Usa MusicStudio!',
+      texto: 'Una aplicación hecha para vos',
+      botonTexto: 'Go to MusicStudio',
+      link:'/'
+    }
+styleType='info'; este puede ser de tipo danger success todos los de admin pro
+-->
+
+<!--<div class="container-fluid">-->
+<div class="row">
+    <div class="col-lg-6">
+
+        <div class="card">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs profile-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Timeline Local</a>
+                </li>
+
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel">
+
+                    <!-- <div class="card-columns widget-app-columns"> -->
+
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="card-body b-t">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <textarea placeholder="Escriba un mensaje Aqui" class="form-control b-0"></textarea>
+
+                                        <i class="fa fa-hashtag"></i> hashtag
+
+                                        <div class="bootstrap-tagsinput">
+                                            <input type="text" value="Guitarra, RockandRoll, Bajo" data-role="tagsinput" placeholder="add tags" /> </div>
+
+                                    </div>
+
+
+                                    <div class="col-4 text-right">
+                                        <button type="button" class="btn btn-info btn-circle btn-lg"><i class="fa fa-paper-plane-o"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="chat-box">
+                                <ul class="chat-list">
+                                    <li>
+                                        <div class="chat-img"><img src="../../../../../assets/adminpro/images/users/5.jpg" alt="user" /></div>
+                                        <div class="chat-content">
+                                            <h5>Ernesto Burgos</h5>
+                                            <div class="box bg-light-info">Tenemos un buen presupuesto para el proyecto</div>
+                                        </div>
+                                        <div class="chat-time">10:58 am</div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <li class="reverse">
+                                        <div class="chat-content">
+                                            <h5>Ronal Forero</h5>
+                                            <div class="box bg-light-inverse">It’s Great opportunity to work.</div>
+                                        </div>
+                                        <div class="chat-img"><img src="../../../../../assets/adminpro/images/users/2.jpg" alt="user" /></div>
+                                        <div class="chat-time">10:57 am</div>
+                                    </li>
+
+                                    <!--chat Row -->
+                                    <li>
+                                        <div class="chat-img"><img src="../../../../../assets/adminpro/images/users/1.jpg" alt="user" /></div>
+                                        <div class="chat-content">
+                                            <h5>James Anderson</h5>
+                                            <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing & type setting industry.</div>
+                                        </div>
+                                        <div class="chat-time">10:56 am</div>
+                                    </li>
+
+                                    <!--chat Row -->
+                                    <li>
+                                        <div class="chat-img"><img src="../../../../../assets/adminpro/images/users/4.jpg" alt="user" /></div>
+                                        <div class="chat-content">
+                                            <h5>Steave Doe</h5>
+                                            <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing</div>
+                                        </div>
+                                        <div class="chat-time">10:55 am</div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-6">
+
+
+        <div class="card">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs customtab" role="tablist">
+                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Noticias</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile2" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">TimeLine</span></a> </li>
+
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home2" role="tabpanel">
+                    <div class="p-20">
+                        <app-menu></app-menu>
+                        <app-card1 [datosExternos]=tarjeta1 [styleType]=styleType></app-card1>
+                        <app-card3 [datosExternos]=tarjeta2 [styleType]=styleType></app-card3>
+                        <app-card3 [datosExternos]=tarjeta3 [styleType]=styleType></app-card3>
+                    </div>
+                </div>
+                <div class="tab-pane  p-20" id="profile2" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Mensaje Recientes</h4>
+                            <div class="message-box">
+                                <div class="message-widget message-scroll">
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <span class="round">A</span> <span class="profile-status away pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5> <span class="mail-desc">Simply dummy text of the printing and typesetting industry.</span> <span class="time">9:08 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Welcome to the Elite Admin</span> <span class="time">9:30 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="#">
+                                        <div class="user-img"> <img src="../../../../../assets/adminpro/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

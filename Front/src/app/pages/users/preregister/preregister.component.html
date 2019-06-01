@@ -1,0 +1,41 @@
+<section id="wrapper">
+    <div class="login-register" style="background-image:url(../../../../assets/adminpro/images/background/login-register.jpg);">
+        <div class="preregister-box card">
+            <!-- <div class="container"> -->
+            <div class=" card">
+                <div class="card-body">
+                    <form [formGroup]="forma">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label>Seleccione un rol</label>
+                                <select class="form-control" [formControlName]="'rol'" name="rol" required>
+                                    <option>Admin</option>
+                                    <option>Usuario</option>
+                                    <option>Artista</option>
+                                    <option>Banda</option>
+                                    <option>Duo</option>
+                                    <option>Trio</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <p *ngIf="forma.value.rol=='Admin'">Caracteristicas del Administrador:</p>
+                        <p *ngIf="forma.value.rol=='Admin'">El Administrador tiene permisos especiales para manejar la Red Social...</p>
+                        <p *ngIf="forma.value.rol=='Usuario'">Caracteristicas del Usuario</p>
+                        <p *ngIf="forma.value.rol=='Artista'">Caracteristicas del Artista</p>
+                        <p *ngIf="forma.value.rol=='Banda'">Caracteristicas de la Banda o Grupo</p>
+                        <p *ngIf="forma.value.rol=='Duo'">Caracteristicas del Duo Musical</p>
+                    </div>
+
+                    <div class="form-group text-center p-b-10">
+                        <div class="col-xs-12">
+                            <button class="btn btn-success" (click)="Continuar()" type="submit" [disabled]="!forma.value.rol">Continuar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

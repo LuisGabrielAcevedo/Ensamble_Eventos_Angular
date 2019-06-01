@@ -1,0 +1,43 @@
+.lista1{
+    padding: 0px 0px;
+    margin: 0px 0px;
+    list-style: none;
+}
+.itemLista1{
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid #383f48;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 2px;
+    height: 45px;;
+}
+.seccion1{
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+.seccion2{
+    float: left;
+    width: 10%;
+}
+
+.seccion1_1{
+    overflow: hidden;
+}
+.listImagen{
+    float: left;
+}
+.listNombre{
+    float: left;
+    text-align: left;
+    margin-left: 6px;
+    margin-top: 3px;
+    width: 120px;
+}
+
+.listPrecio{
+    float: right;
+    margin-top: 9px;
+    margin-right: 6px;
+} 

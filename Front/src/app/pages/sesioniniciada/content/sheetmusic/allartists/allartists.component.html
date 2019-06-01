@@ -1,0 +1,28 @@
+<!--
+<div>
+    <div>
+        <h2>{{titulo}}</h2>
+    </div>
+    <div>
+        <ul class="Lista1">
+            <li class="ItemLista1" *ngFor="let arti of artistas">
+                <div class="posi1Lista1">
+                    <div *ngIf="arti.artist_image == 'null'">
+                        <img src="../../../../../../assets/adminpro/images/users/Imagen.png" width="100px" height="100px">
+                    </div>
+                </div>
+                <div class="posi2Lista1">
+                    <p><a [routerLink]="['/Partitura','Info',arti._id]">{{arti.artist_name}}</a></p>
+                    <p><a [routerLink]="['/Partitura','Info',arti._id]">( {{arti.number_music_sheet}} )</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-success" (click)="OpenModal()">Add</button>
+    </div>
+</div>
+-->
+
+<h2 style="margin-left:10px;">Todos los Artistas</h2>
+<app-list3> </app-list3>

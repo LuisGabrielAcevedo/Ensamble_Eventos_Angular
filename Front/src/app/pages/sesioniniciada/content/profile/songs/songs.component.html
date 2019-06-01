@@ -1,0 +1,9 @@
+<div class="card">
+  <div *ngIf="!albums" class="card-body Loading">
+    <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+  </div>
+  <div *ngIf="albums" class="card-body" style="padding: 0px;">
+    <h4 style="text-align: center; margin: 20px;">Albums</h4>
+    <app-albums [tipo]=tipo [listaAlbums]=albums [artistId]=artistId></app-albums>
+  </div>
+</div>

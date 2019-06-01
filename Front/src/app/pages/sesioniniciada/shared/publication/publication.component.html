@@ -1,0 +1,74 @@
+<div class="card">
+    <div *ngIf="!publications && !artist" class="card-body Loading">
+        <img src="assets/adminpro/icons/Loading.gif" width="40px" height="40px" />
+    </div>
+    <div *ngIf="publications && publications.length == 0" class="card-body">
+        <h4>Artista sin publicaciones</h4>
+    </div>
+    <div *ngIf="publications.length !==0 && artist">
+        <h4 style="text-align: center; margin: 20px;">Publicaciones</h4>
+        <!-- <div class="ownStyle">
+        <button class="btn btn-success" (click)="newPublicationState = !newPublicationState">
+          Realizar una publicación</button>
+      </div>
+      <div *ngIf="newPublicationState">
+        <app-newpublication></app-newpublication>
+      </div> -->
+        <ul class="lista">
+            <li *ngFor="let publication of publications " class="publicacion">
+                <div class="encabezadoPublicacion">
+                    <div class="imagenPerfilPublicacion">
+                        <img *ngIf="artist.imagen" src="{{'assets/adminpro/images/mockImages/'+artist.imagen}}" class="img-circle" width="50px" height="50px" />
+                        <img *ngIf="!artist.imagen" src="assets/adminpro/images/users/Imagen.png" class="img-circle" width="50px" height="50px" />
+                        <!-- <img *ngIf="artist.imagen" src="{{url+'getImagen/'+artist.imagen}}" alt="user" class="img-circle" /> -->
+                    </div>
+                    <div class="datosEncabezadoPublicacion">
+                        <a href="" class="link" style="color: white">{{artist.nombreUsuario}}.</a>
+                        <span class="sl-date" style="color: white"> {{publication.registrationDate}}</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding:0px;">
+                            <div *ngIf="publication.tipoDeArchivo">
+                                <img *ngIf="publication.tipoDeArchivo=='IMAGEN'" src="{{'assets/adminpro/images/mockImages/'+publication.archivo}}" class="img-responsive" />
+                                <!-- <img *ngIf="publication.tipoDeArchivo=='IMAGEN'" src="{{url+'getImagenPublication/'+publication.archivo}}" class="img-responsive radius"
+                  /> -->
+                                <div *ngIf="publication.tipoDeArchivo=='VIDEO' || publication.tipoDeArchivo=='AUDIO'" class="embed-responsive embed-responsive-16by9">
+                                    <video *ngIf="publication.tipoDeArchivo=='VIDEO'" class="embed-responsive-item" src="{{'assets/adminpro/mockVideos/'+publication.archivo}}" controls>
+                      Tu navegador no implementa el elemento
+                      <code>video</code>.
+                    </video>
+                                    <audio *ngIf="publication.tipoDeArchivo=='AUDIO'" class="embed-responsive-item" src="{{url+'getAudioPublication/'+publication.archivo}}" controls>
+                      <p>Tu navegador no implementa el elemento audio.</p>
+                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding:10px;">
+                            <div *ngIf="publication.texto">
+                                <p>{{publication.texto}}</p>
+                            </div>
+                            <div class="row" class="informacionPublicaciones">
+                                <a style="float: left;" class="click">
+                                    <!-- <i class="mdi mdi-heart-outline"></i> -->
+                                    <i class="mdi mdi-heart"></i>
+                                </a>
+                                <p style="float: left; margin:0px; margin-left: 5px" class="click">35</p>
+                                <p style="float: right; margin:0px" class="click">45 comentarios</p>
+                            </div>
+                            <div class="row" class="botonesPublicaciones">
+                                <a style="float: left;" class="click">
+                                    <i class="mdi mdi-heart-outline"></i> Like</a>
+                                <a style="float: center;" class="click">
+                                    <i class="mdi mdi-comment-outline"></i> Comentar</a>
+                                <a style="float: right;" class="click">
+                                    <i class="mdi mdi-arrow-right"></i> Compartir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

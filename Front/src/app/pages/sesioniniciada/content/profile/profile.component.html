@@ -1,0 +1,51 @@
+<!-- ============================================================== -->
+<!-- Horizontal navbar and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row hdr-nav-bar">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div style="overflow: hidden;">
+                    <a *ngIf="artist" class="navbar-brand hidden-lg-up" style="float: left; margin-right: 1px;">{{artist.nombreUsuario}}</a>
+            </div>
+            <a class="navbar-toggler">
+                <span class="ti-menu" data-toggle="collapse" data-target="#navbarText"></span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','information',artistId._id]">Informacion</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','publications',artistId._id]">Publicaciones</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','photos',artistId._id]">Fotos</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','songs',artistId._id]">Canciones</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','videos',artistId._id]">Videos</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','events',artistId._id]">Eventos</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/profile','performances',artistId._id]">Reservar actuación</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Horizontal navbar and right sidebar toggle -->
+<!-- ============================================================== -->
+<router-outlet></router-outlet>

@@ -1,0 +1,33 @@
+<!-- ============================================================== -->
+<!-- Horizontal navbar and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row hdr-nav-bar">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand hidden-lg-up">Ensamble Eventos</a>
+            <a class="navbar-toggler">
+                <span class="ti-menu" data-toggle="collapse" data-target="#navbarText"></span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/sheetmusic','allartists']">Artistas</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/sheetmusic','searchmusicsheet', 'value']">Buscador</a>
+                    </li>
+                    <!-- Nav item -->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" [routerLink]="['/sheetmusic','musicsheetinformation']">Partitura</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Horizontal navbar and right sidebar toggle -->
+<!-- ============================================================== -->
+<router-outlet></router-outlet>

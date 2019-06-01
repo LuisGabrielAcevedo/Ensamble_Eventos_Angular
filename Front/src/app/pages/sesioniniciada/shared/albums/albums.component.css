@@ -1,0 +1,49 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.listaAlbum{
+    list-style: none;
+    margin: 5px auto;
+    overflow: hidden;
+}
+.extraItemAlbum{
+    float:left; 
+    height: 160px;
+    width:170px; 
+    font-size:14px; 
+    margin: 5px 5px 5px 5px;
+    z-index: 1;
+    border-radius: 7px;
+    position: relative;
+    background: white;
+}
+
+.extraItemAlbum:hover{
+    transform: scale(0.9);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.imagenItem{
+    height: 160px;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.itemPalabras{
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: 37%;
+    left: 0px;
+    padding: 5px;
+    text-align: center; 
+}
+
+@media screen and (max-width: 359px){.listaAlbum{max-width: 180px;}}
+@media screen and (max-width: 617px) and (min-width:360px) {.listaAlbum{max-width: 360px;}}
+@media only screen and (max-width: 756px) and (min-width: 618px){.listaAlbum{max-width: 540px;}} 
+@media only screen and (min-width: 757px){.listaAlbum{margin: 5px 10px;}} 
